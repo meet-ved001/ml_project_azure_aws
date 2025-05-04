@@ -10,12 +10,34 @@ class PredictPipeline:
         try:
             model_path = "artifacts/model.pkl"
             preprocessor_path = "artifacts/preprocessor.pkl"
+            print("Loading model and preprocessor...")  # Debug print
             model = load_object(file_path = model_path)#load the model
             preprocessor = load_object(file_path = preprocessor_path)
+            
+            print("Input features before preprocessing:", features)  # Debug print
             data_scaled = preprocessor.transform(features)#scale the input data
+            print("Features after preprocessing:", data_scaled)  # Debug print
+            
             preds = model.predict(data_scaled)
-            return preds
+            print("Raw model predictions (math scores):", preds)  # Debug print
+            
+            # Convert math score predictions to performance categories
+            prediction_categories = []
+            for pred in preds:
+                if pred >= 90:
+                    prediction_categories.append(0)  # Excellent
+                elif pred >= 80:
+                    prediction_categories.append(1)  # Good
+                elif pred >= 70:
+                    prediction_categories.append(2)  # Average
+                elif pred >= 60:
+                    prediction_categories.append(3)  # Below Average
+                else:
+                    prediction_categories.append(4)  # Needs Support
+            
+            return preds[0], prediction_categories[0]  # Return both raw score and category
         except Exception as e:
+            print("Error in prediction:", str(e))  # Debug print
             raise CustomException(e,sys)
 class CustomData:#class to store the input data
     def __init__(self,
