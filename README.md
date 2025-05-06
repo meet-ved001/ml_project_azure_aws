@@ -2,6 +2,43 @@
 
 A machine learning-powered web application that predicts student performance based on various factors. Built with Flask and deployed on AWS Elastic Beanstalk.
 
+## Project Overview
+
+This project aims to predict student performance using machine learning techniques. The application provides an intuitive interface for educators to input student data and receive performance predictions, helping them identify students who might need additional support.
+
+## Project Goals
+
+- Develop a machine learning model to predict student performance
+- Create an intuitive web interface for easy interaction
+- Provide real-time predictions based on student data
+- Deploy the application on AWS for scalability and reliability
+- Enable educators to make data-driven decisions about student support
+
+## Dataset Description
+
+The project uses a comprehensive student dataset with the following features:
+
+- **Demographic Information**:
+  - Gender
+  - Age
+  - Ethnicity
+  - Parent's education level
+
+- **Academic Factors**:
+  - Previous test scores
+  - Study time
+  - Attendance rate
+  - Course load
+
+- **Environmental Factors**:
+  - Family support
+  - Internet access
+  - Living conditions
+  - Travel time to school
+
+- **Target Variable**:
+  - Final grade/performance score
+
 ## Features
 
 - Machine learning model for student performance prediction
@@ -68,18 +105,18 @@ A machine learning-powered web application that predicts student performance bas
    python application.py
    ```
    The application will be available at `http://localhost:5000`
-   
-## Dashboard output
 
-1. **Input**
+## Dashboard Interface
 
-   ![image](https://github.com/user-attachments/assets/be7d40a3-b80a-4fd6-a298-c2488686a3dc)
+1. **Input Form**
+   - User-friendly form to input student data
+   - Real-time validation of inputs
+   - Clear field descriptions and help text
 
-2. **Output Prediction**
-
-   ![image](https://github.com/user-attachments/assets/28357fd8-0b1e-48a2-a9e2-06e9dd00bf6a)
-
-
+2. **Prediction Output**
+   - Clear display of predicted performance
+   - Confidence score for predictions
+   - Visual representation of results
 
 ## Deployment to AWS Elastic Beanstalk
 
@@ -123,6 +160,9 @@ The following environment variables are required:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
