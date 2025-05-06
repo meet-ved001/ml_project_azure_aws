@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template,send_from_directory
 import numpy as np
 import pandas as pd
 from src.pipeline.predict_pipeline import CustomData, PredictPipeline
@@ -9,6 +9,10 @@ app = application
 @app.route('/')
 def index():
     return render_template('home.html')
+
+@app.route('/static/<path:path>')
+def serve_static(path):
+    return send_from_directory('static', path)
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict_datapoint():
