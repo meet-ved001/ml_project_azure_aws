@@ -68,6 +68,18 @@ A machine learning-powered web application that predicts student performance bas
    python application.py
    ```
    The application will be available at `http://localhost:5000`
+   
+## Dashboard output
+
+1. **Input**
+
+   ![image](https://github.com/user-attachments/assets/be7d40a3-b80a-4fd6-a298-c2488686a3dc)
+
+2. **Output Prediction**
+
+   ![image](https://github.com/user-attachments/assets/28357fd8-0b1e-48a2-a9e2-06e9dd00bf6a)
+
+
 
 ## Deployment to AWS Elastic Beanstalk
 
