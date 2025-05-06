@@ -19,10 +19,13 @@ This project aims to predict student performance using machine learning techniqu
 The project uses a comprehensive student dataset with the following features:
 
 - **Demographic Information**:
-  - Gender
+  - Gender (Male, Female)
   - Age
-  - Ethnicity
+  - Race_Ethnicity (Group A, B, C, D AND E)
   - Parent's education level
+  - Lunch (standard, free)
+  - test_preparation (none, completed)
+  - math_score, reading_score and writing_score
 
 - **Academic Factors**:
   - Previous test scores
