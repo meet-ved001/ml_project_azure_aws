@@ -115,11 +115,14 @@ The project uses a comprehensive student dataset with the following features:
    - User-friendly form to input student data
    - Real-time validation of inputs
    - Clear field descriptions and help text
+   - 
+![image](https://github.com/user-attachments/assets/3754eed1-5716-438f-9c19-12e145e2918a)
 
 2. **Prediction Output**
    - Clear display of predicted performance
    - Confidence score for predictions
    - Visual representation of results
+![image](https://github.com/user-attachments/assets/b2b38f88-f4b7-4e99-9ab7-ad77c02b47c8)
 
 ## Deployment to AWS Elastic Beanstalk
 
